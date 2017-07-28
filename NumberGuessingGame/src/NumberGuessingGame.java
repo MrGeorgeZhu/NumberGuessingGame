@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//aaa
 public class NumberGuessingGame {
 	static int key;
 	static String name;
@@ -29,7 +29,7 @@ public class NumberGuessingGame {
 			Scanner userInput = new Scanner(System.in);
 			int answer = userInput.nextInt();
 			if(i==2){
-				delay();
+				//delay();
 				System.out.println("机会用完了！你输啦。");
 				keepGoing();
 			}
@@ -47,7 +47,7 @@ public class NumberGuessingGame {
 	}
 	
 	public static void generateNumber(){
-		key = (int)(Math.random()*9)+1;
+		key = (int)(Math.random()*10)+1;
 	}
 	
 	public static void keepGoing(){
@@ -57,6 +57,9 @@ public class NumberGuessingGame {
 		
 		if(userInput.nextLine().equalsIgnoreCase("Y")){
 			play();
+		} else {
+			System.out.println("再见，欢迎下次再玩！");
+			System.exit(0);
 		}
 	}
 	
